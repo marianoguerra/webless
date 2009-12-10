@@ -1,1 +1,29 @@
 you need tubes in this directory for webless to work (http://github.com/marianoguerra/tubes)
+
+a simple example:
+
+* get webless from github
+* get tubes from github and put the tubes dir inside the webless dir
+   (webless/tubes)
+* you will need the bindings for webkit in gtk to make this work
+   (aptitude install python-webkit on ubuntu)
+* cd webless
+* python server.py
+* firefox http://0.0.0.0:8000
+* put www.google.com/search?q=sublime on the url field
+* put the following on the code field:
+
+var page = $("html");
+page.html($(".l"));
+$('.l').wrap('<li></li>');
+page.wrapInner('<ul></ul>');
+
+* click on Test (you should get a list of links below)
+* click on Send (you should get a link to the script that is stored on the server)
+
+
+TODO:
+
+* add persistent link storage
+* find a real usage for this :P
+

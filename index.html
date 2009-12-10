@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+ 
+  <title>Webless</title>
+  <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" charset="utf-8"/>
+  
+  <script type="text/javascript" src="/js/json2.js"></script>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/ws.js"></script>
+  <script type="text/javascript" src="/js/ui.js"></script>
+ </head>
+
+ <body>
+  <fieldset id="script">
+   <legend>webless</legend>
+    <p><label for="url">url</label><input type="text" name="url" value="" id="url"/></p>
+    <p>code (can use json2.js and jquery.js)</p>
+    <textarea rows="15" cols="40" id="code"></textarea>
+    <div id="buttons">
+     <button onclick="ui.sendCode();">Send</button>
+     <button onclick="ui.testCode();">Test</button>
+    </div>
+  </fieldset>
+
+  <div id="test-result">
+  </div>
+
+  <div id="send-result">
+  </div>
+ </body>
+</html>

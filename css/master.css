@@ -1,0 +1,54 @@
+html, body, div, span{
+ margin: 0;
+ padding: 0;
+}
+
+body{
+ color: #333;
+ font-family: arial;
+}
+
+fieldset{
+ width: 80%;
+ margin-left: 10%;
+ margin-top: 2em;
+ border: 1px solid #555;
+}
+
+button{
+ border: 1px solid #555;
+ background-color: #fff;
+}
+
+p{
+ display: table;
+ width: 100%;
+}
+
+label{
+ width: 40%;
+ float: left;
+ margin-bottom: 1em;
+}
+
+input{
+ width: 40%;
+ float: right;
+ border: 1px solid #555;
+}
+
+textarea{
+ width: 100%;
+ border: 1px solid #555;
+}
+
+#buttons{
+ float: right;
+ margin: 0.5em;
+}
+
+#send-result, #test-result{
+ width: 80%;
+ margin-left: 10%;
+ margin-top: 2em;
+}

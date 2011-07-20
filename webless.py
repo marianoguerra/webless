@@ -102,15 +102,19 @@ def process_events():
     while gtk.events_pending():
         gtk.main_iteration(True)
 
-if __name__ == '__main__':
-    browser = Browser('www.google.com/search?q=emesene')
+def load(url, on_load_finished):
+    browser = Browser(url)
 
     def inject_fun(view, frame):
         browser.inject_file('js/jquery.js')
         browser.inject_file('js/json2.js')
 
-    browser.view.connect('load-finished', inject_fun)
+        if on_load_finished is not None:
+            on_load_finished(browser, frame)
 
+    browser.view.connect('load-finished', inject_fun)
     browser.show()
 
+if __name__ == '__main__':
+    load('www.google.com/search?q=emesene', None)
     gtk.main()
